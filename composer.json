@@ -1,0 +1,43 @@
+{
+    "name": "vildanbina/livewire-wizard",
+    "description": "Laravel Livewire Wizard (Multi-Step Form) component",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "multi-steps",
+        "wizard",
+        "form"
+    ],
+    "homepage": "https://github.com/vildanbina/livewire-wizard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vildan Bina",
+            "email": "vildanbina@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "livewire/livewire": "^2.0",
+        "wireui/wireui": "^1.0",
+        "spatie/laravel-package-tools": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vildanbina\\LivewireWizard\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vildanbina\\LivewireWizard\\LivewireWizardServiceProvider"
+            ],
+            "aliases": {
+                "LivewireWizard": "Vildanbina\\LivewireWizard\\Facades\\LivewireWizard"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
