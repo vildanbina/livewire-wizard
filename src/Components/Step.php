@@ -18,6 +18,7 @@ abstract class Step extends ViewComponent implements Htmlable
     public ?int $order = null;
     public null|array|Model $model = null;
     protected string $view;
+    public bool $validationFails = false;
 
     public function __construct(WizardForm $livewire)
     {

@@ -189,6 +189,7 @@ abstract class WizardComponent extends Component implements WizardForm
 
             if (method_exists($stepInstance, 'validate') && $stepInstance->getOrder() <= $step) {
                 $stepValidate = $stepInstance->validate();
+                $stepInstance->validationFails = !$stepInstance->isValid();
 
                 $rules      = array_merge($rules, $stepValidate[0] ?? []);
                 $messages   = array_merge($messages, $stepValidate[1] ?? []);

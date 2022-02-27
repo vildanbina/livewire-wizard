@@ -36,6 +36,7 @@ trait HasSteps
         if ($this->hasPrevStep($step)) {
             $this->stepsValidation($this->prevStep($step));
         }
+
         $this->getCurrentStep()->callHook('onStepOut');
 
         $this->activeStep = $step;
