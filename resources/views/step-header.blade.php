@@ -10,7 +10,7 @@
                 <div class="bg-gray-200 rounded flex-1">
                     <div
                         @class([
-                            'rounded py-1',
+                            'rounded py-0.5',
                             'bg-green-300' => $stepIsGreaterOrEqualThan && !$isFailedStep,
                             'bg-red-300' => $isFailedStep,
                             'w-full' => $isFailedStep || $stepIsGreaterOrEqualThan,
@@ -21,7 +21,7 @@
             </div>
         @endif
 
-        <div class="w-10 mx-auto">
+        <div class="grid place-items-center">
             <x-button.circle
                 :positive="$stepIsGreaterOrEqualThan && !$isFailedStep"
                 :negative="$isFailedStep"
