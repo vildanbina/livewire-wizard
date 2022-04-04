@@ -1,8 +1,8 @@
 <div>
-    <x-errors/>
     <form wire:submit.prevent="save">
         @include('livewire-wizard::steps-header')
-        <div class="container p-4">
+        <x-errors/>
+        <div class="container p-4 mx-auto">
             {{ $this->getCurrentStep() }}
         </div>
 

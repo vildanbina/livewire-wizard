@@ -60,6 +60,11 @@ abstract class WizardComponent extends Component implements WizardForm
         }
 
         $this->stepClasses(function (Step $step) {
+            
+            if (method_exists($this, 'model')) {
+                $step->setModel($this->model);
+            }
+            
             if (method_exists($step, 'mount')) {
                 $step->mount();
             }

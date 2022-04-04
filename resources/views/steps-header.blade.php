@@ -1,4 +1,4 @@
-<div class="w-full py-6">
+<div class="w-full pb-6 pt-2">
     <div class="flex">
         @foreach($stepInstances as $stepInstance)
             @include('livewire-wizard::step-header')
