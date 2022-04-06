@@ -164,6 +164,7 @@ class General extends Step
                 'state.name'     => ['required', Rule::unique('users', 'name')->ignoreModel($this->model)],
                 'state.email'    => ['required', Rule::unique('users', 'email')->ignoreModel($this->model)],
             ],
+            [],
             [
                 'state.name'     => __('Name'),
                 'state.email'    => __('Email'),
