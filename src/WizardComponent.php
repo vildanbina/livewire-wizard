@@ -7,6 +7,7 @@ use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
+use Str;
 use Vildanbina\LivewireWizard\Components\Step;
 use Vildanbina\LivewireWizard\Concerns\HasHooks;
 use Vildanbina\LivewireWizard\Concerns\HasState;
@@ -126,7 +127,7 @@ abstract class WizardComponent extends Component implements WizardForm
     private function callHooksStep($hook, $name, $value): void
     {
         $stepInstance = $this->getCurrentStep();
-        $name         = str($name);
+        $name         = Str::of($name);
 
         $propertyName     = $name->studly()->before('.');
         $keyAfterFirstDot = $name->contains('.') ? $name->after('.')->__toString() : null;
