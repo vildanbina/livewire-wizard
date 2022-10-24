@@ -85,7 +85,7 @@ abstract class Step extends ViewComponent implements Htmlable
         return $this;
     }
 
-    public function view(string $view): static
+    public function setView(string $view): static
     {
         $this->view = $view;
 
