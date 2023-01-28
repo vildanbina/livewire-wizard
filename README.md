@@ -182,6 +182,12 @@ class General extends Step
 }
 ```
 
+**Note:** Remember to use the prefix `state.` in the `wire:model` attribute in views, for example: `wire:model="state.name"`
+
+
+
+
+
 In Step class, you can use livewire hooks example:
 
 ```php
