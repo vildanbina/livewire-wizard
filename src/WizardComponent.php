@@ -24,15 +24,7 @@ abstract class WizardComponent extends Component implements WizardForm
     public null|array|Model $model = null;
     protected array $cachedSteps = [];
 
-    public function __construct($id = null)
-    {
-        parent::__construct($id);
-
-        if ($this->saveStepState) {
-            $this->queryString[] = 'activeStep';
-        }
-    }
-
+    protected $queryString = [];
     public function resetForm(): void
     {
         $this->callHook('beforeResetForm');

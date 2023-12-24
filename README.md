@@ -47,7 +47,7 @@ You can create livewire component `php artisan make:livewire UserWizard` to make
 ```php
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Vildanbina\LivewireWizard\WizardComponent;
 use App\Models\User;
@@ -234,7 +234,7 @@ After create step class, you need to put that step to wizard form:
 ```php
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use App\Steps\General;
 use Vildanbina\LivewireWizard\WizardComponent;

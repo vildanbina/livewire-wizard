@@ -3,9 +3,11 @@
 namespace Vildanbina\LivewireWizard\Concerns;
 
 use Arr;
+use Livewire\Attributes\Url;
 
 trait HasSteps
 {
+    #[Url(keep: true)]
     public int $activeStep = 0;
     public array $steps = [];
 
@@ -88,5 +90,14 @@ trait HasSteps
     public function stepIsLessThan($step): bool
     {
         return $this->activeStep < $step;
+    }
+
+    protected function queryStringHasSteps()
+    {
+        if ($this->saveStepState) {
+            return ['activeStep'];
+        }
+
+        return [];
     }
 }
