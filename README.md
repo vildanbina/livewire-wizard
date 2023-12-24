@@ -15,6 +15,11 @@ You can install the package via composer:
 ``` bash
 composer require vildanbina/livewire-wizard
 ```
+Or if you want to install package that is compatible with Livewire 2, install via composer:
+
+``` bash
+composer require vildanbina/livewire-wizard:^1.0
+```
 
 For UI design this package require [WireUI package](https://livewire-wireui.com) for details.
 
